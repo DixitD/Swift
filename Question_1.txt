@@ -1,0 +1,22 @@
+var Product: [(Name: String, Price: Double, Quantity: Int, type: String)] = []
+Product.append((Name: "lettuce",Price: 10.5,Quantity: 50,type: "Leafy green"))
+Product.append((Name: "cabbages",Price: 20,Quantity: 100,type: "Cruciferous"))
+Product.append((Name: "pumpkin",Price: 30,Quantity: 30,type: "Marrow"))
+Product.append((Name: "cauliflower",Price: 10,Quantity: 25,type: "Cruciferous"))
+Product.append((Name: "zucchini",Price: 20.5,Quantity: 50,type: "Marrow"))
+Product.append((Name: "yam",Price: 30,Quantity: 50,type: "Root"))
+Product.append((Name: "spinach",Price: 10,Quantity: 100,type: "Leafy green"))
+Product.append((Name: "broccoli",Price: 20.2,Quantity: 75,type: "Cruciferous"))
+Product.append((Name: "Garlic",Price: 30,Quantity: 20,type: "Leafy green"))
+Product.append((Name: "silverbeet",Price: 10,Quantity: 50,type: "Marrow"))
+print(" \n1.Total No of Count:\(Product.count)")
+Product.append((Name: "Potato",Price: 10,Quantity: 50,type: "Root"))
+print(" \n2.Total No of Count (after add a new item):\(Product.count)")
+print(" \n3.Leafy green type Products:")
+for i in Product 
+{
+	if i.type == "Leafy green"
+	{
+		print(i)
+	}
+}

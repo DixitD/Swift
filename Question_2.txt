@@ -1,0 +1,20 @@
+var prime_minister:[Int: String] = [1998: "Atal Bihari Vajpayee",2014: "Narendra Modi", 2004: "Manmohan Singh"]
+
+print(" \n1.Prime Minister of year 2004:")
+let p = prime_minister.filter { $0.key == 2004 }
+for (year,name) in p{
+    print(year,name)
+}
+
+prime_minister[2018] = "Narendra Modi"
+print(" \n2.Dictionary after adding current prime minister:")
+
+for (year,name) in prime_minister{
+    print(year,name)
+}
+
+let pm = prime_minister.sorted{ $0.key < $1.key }
+print(" \n3.Dictionary sort(ascending order) based on year:")
+for (year,name) in pm {
+    print(year,name)
+}

@@ -1,0 +1,66 @@
+
+protocol Employee {
+	var Id : Int { get set }
+	var Name: String { get set }
+	var Designation: String { get set }
+	var Experince: Int { get set }
+	var salary: Int { get set }
+	var joinDate: String { get set }
+    func Salary() ->Int
+}
+
+class Devloper : Employee
+{
+	var Id : Int
+	var Name: String
+	var Designation: String
+	var Experince: Int
+	var salary: Int
+	var joinDate: String
+	init(Id: Int, Name: String, Designation: String, Experince: Int, salary: Int, joinDate :String)
+	{
+		self.Id = Id
+		self.Name = Name
+		self.Designation = Designation
+		self.Experince = Experince
+		self.salary = salary
+		self.joinDate = joinDate
+	}
+	
+	func Salary() ->Int
+	{
+		 return ((2000*Experince)+salary)
+	}
+	
+			
+}
+class HR : Employee
+{
+	var Id : Int
+	var Name: String
+	var Designation: String
+	var Experince: Int
+	var salary: Int
+	var joinDate: String
+	//constructor
+	init(Id: Int, Name: String, Designation: String, Experince: Int, salary: Int,joinDate :String)
+	{
+		self.Id = Id
+		self.Name = Name
+		self.Designation = Designation
+		self.Experince = Experince
+		self.salary = salary
+		self.joinDate = joinDate
+	}
+	func Salary() ->Int
+	{
+		 return ((1000*Experince)+salary)
+	}	
+}
+
+	
+var hr = HR(Id :1,Name: "HR",Designation: "HR",Experince: 4,salary: 8000,joinDate: "16/02/2018")
+var dev = Devloper(Id :2,Name: "Emp",Designation: "Devloper",Experince: 5,salary: 8000,joinDate: "16/02/2018")
+
+print("Salary(monthly) of HR :\(hr.Salary())")
+print("Salary(monthly) of Developer :\(dev.Salary())")
